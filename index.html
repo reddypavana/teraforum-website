@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RISA - Empowering Students, Building the Future</title>
+  <meta name="description" content="RISA is dedicated to empowering students and building a better future through education and activities." />
+  <meta name="author" content="RISA" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  
+  <meta property="og:title" content="RISA - Student Empowerment Organization" />
+  <meta property="og:description" content="RISA is dedicated to empowering students and building a better future through education and activities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lovable_dev" />
+  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    :root {
+      --primary-blue: #1EAEDB;
+      --dark-blue: #0b7aa0;
+      --light-blue: #33C3F0;
+      --white: #FFFFFF;
+      --light-gray: #F1F1F1;
+      --dark-gray: #333333;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--dark-gray);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    .header {
+      background-color: var(--light-gray);
+      padding: 20px 0;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--dark-gray);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-gray);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-blue);
+    }
+
+    .nav-links a.active {
+      color: var(--primary-blue);
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: var(--light-gray);
+      padding: 50px 0;
+    }
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .hero-image {
+      width: 45%;
+      max-width: 400px;
+      height: 300px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--white);
+    }
+
+    .hero-content {
+      width: 50%;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--dark-gray);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: transparent;
+      color: var(--dark-gray);
+      padding: 10px 30px;
+      border: 1px solid var(--dark-gray);
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      border-color: var(--primary-blue);
+    }
+
+    /* About Section */
+    .about {
+      padding: 70px 0;
+      background-color: var(--white);
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .about-content {
+      width: 50%;
+    }
+
+    .about-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--dark-blue);
+    }
+
+    .placeholder-text {
+      height: 10px;
+      background-color: var(--light-gray);
+      margin-bottom: 10px;
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .about-content .placeholder-text:last-child {
+      width: 70%;
+    }
+
+    .about-image {
+      width: 45%;
+      border: 1px solid #ccc;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--light-gray);
+    }
+
+    .about-image-content {
+      width: 45%;
+    }
+
+    .placeholder-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      font-size: 2rem;
+      color: #ccc;
+    }
+
+    /* Activities Section */
+    .activities {
+      padding: 70px 0;
+      background-color: var(--light-gray);
+    }
+
+    .activities h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: var(--dark-blue);
+    }
+
+    .activities-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .activity-card {
+      width: 30%;
+      background-color: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .activity-image {
+      height: 200px;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .activity-content {
+      padding: 15px;
+    }
+
+    /* Team Section */
+    .team {
+      padding: 70px 0;
+      background-color: var(--white);
+    }
+
+    .team h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: var(--dark-blue);
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      width: 22%;
+      text-align: center;
+    }
+
+    .team-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      margin: 0 auto 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--light-gray);
+    }
+
+    .team-member .placeholder-text {
+      margin: 0 auto;
+      width: 60%;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 70px 0;
+      background-color: var(--light-gray);
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .contact-info {
+      width: 30%;
+    }
+
+    .contact-info h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--dark-blue);
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-icon {
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .contact-form {
+      width: 65%;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: var(--white);
+    }
+
+    textarea.form-input {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      background-color: transparent;
+      color: var(--dark-gray);
+      padding: 10px 30px;
+      border: 1px solid var(--dark-gray);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      float: right;
+    }
+
+    .submit-btn:hover {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      border-color: var(--primary-blue);
+    }
+
+    /* Page-specific styles */
+    .page-header {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .page-content {
+      padding: 60px 0;
+      min-height: 500px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark-gray);
+      color: var(--white);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    footer .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .footer-links a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--light-blue);
+    }
+
+    .copyright {
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .hero-container, .about-container, .activities-container, .contact-container {
+        flex-direction: column;
+      }
+
+      .hero-image, .hero-content, .about-content, .about-image, .about-image-content, .activity-card, .contact-info, .contact-form {
+        width: 100%;
+      }
+
+      .team-member {
+        width: 45%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .team-member {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">RISA</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="activities.html">Activities</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>About RISA</h1>
+      <p>Learn more about our mission, vision, and values</p>
+    </div>
+  </section>
+
+  <!-- About Page Content -->
+  <section class="page-content">
+    <div class="container">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>Our Mission</h2>
+          <p>RISA (Rising Innovation for Student Advancement) is a student-led organization dedicated to empowering students through educational initiatives, skill development programs, and community service.</p>
+          <p>Our mission is to bridge the gap between academic learning and real-world applications by providing opportunities for students to develop leadership, innovation, and entrepreneurial skills.</p>
+          <h2>Our Vision</h2>
+          <p>We envision a world where every student has access to resources and opportunities that enable them to reach their full potential and make meaningful contributions to society.</p>
+        </div>
+        <div class="about-image">
+          <div class="placeholder-image">RISA Team</div>
+        </div>
+      </div>
+
+      <div class="about-container" style="margin-top: 40px;">
+        <div class="about-image">
+          <div class="placeholder-image">Our Work</div>
+        </div>
+        <div class="about-content">
+          <h2>Our Values</h2>
+          <ul style="list-style-position: inside; margin-bottom: 20px;">
+            <li>Innovation and creativity in problem-solving</li>
+            <li>Inclusivity and diversity in all our initiatives</li>
+            <li>Excellence in everything we do</li>
+            <li>Collaboration and teamwork</li>
+            <li>Service to the community</li>
+          </ul>
+          <p>Since our founding in 2020, we have successfully implemented various projects and programs that have positively impacted thousands of students across multiple campuses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="activities.html">Activities</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="copyright">© 2025 RISA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+</body>
+</html>
